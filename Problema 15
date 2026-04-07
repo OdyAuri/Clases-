@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main ()
+{
+  int x=0;
+  int R=0;
+  printf("Ingrese el numero de personas: ");
+  scanf("%d", &x);
+  if(x>200)
+  {
+     if(x<=300)
+        R=x*85;
+     else
+        R=x*75;
+  }
+  else
+  {
+     R=x*95;
+  }
+  printf("El costo total es %d\n",R);
+
+return 0;
