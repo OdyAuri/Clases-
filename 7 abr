@@ -1,38 +1,40 @@
-#include <studio.h>
+#include <stdio.h>
 int main () 
 {
  float a, b, r;
  int op=0;
- printf "la calculadora basica \n");
- printf("escoge una opcion\n)";
- printf("1.- Suma\n)";
- printf("2.- Resta\n)";
- printf("3.- Multiplicación\n)";
- printf("4.- División\n)";
- printf("1.- Opción:\n)";
+ printf("la calculadora basica\n");
+ printf("escoge una opcion\n");
+ printf("1.- Suma\n");
+ printf("2.- Resta\n");
+ printf("3.- Multiplicación\n");
+ printf("4.- División\n");
+ printf("1.- Opción:\n");
  scanf ("%d",&op);
- print ("Ingresa dos cantidades separadas por espacio"\n);
+ printf ("Ingresa dos cantidades separadas por espacio\n");
  scanf("%f %f",&a,&b);
  switch(op);
  { 
-  Default
+  default
+   :
    printf("La opción no es valida");
-  Case 1.
-   res=a+b;
-   printf("El rsultado es %f\n",res);
-   Break;
-  Case 2.
-   res=a-b;
-   printf("El rsultado es %f\n",res);
-   Break;
-  Case 3.
-   res=a*b;
-   printf("El rsultado es %f\n",res);
-   Break;
-  Case 4.
-   res=a/b;
-   printf("El rsultado es %f\n",res);
-   Break;
+   break;
+  case 1.
+   r=a+b;
+   printf("El resultado es %f\n",r);
+   break;
+  case 2.
+   r=a-b;
+   printf("El resultado es %f\n",r);
+   break;
+  case 3.
+   r=a*b;
+   printf("El resultado es %f\n",r);
+   break;
+  case 4.
+   r=a/b;
+   printf("El resultado es %f\n",r);
+   break;
  }
  return 0;
 }
