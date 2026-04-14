@@ -1,0 +1,41 @@
+include <stdio.h>
+#include <math.h>
+
+void main()
+{
+  double n1,n2,res;
+  int op;
+
+ do
+ (
+  printf("Bienvenida a mi calculadora\n");
+  printf("Escoge una opción\n");
+  printf("1.-Suma\n");
+  printf("2.-Resta\n");
+  printf("3.-Multiplicación\n");
+  printf("4.-Division\n");
+  printf("5.-Raiz cuadrada\n");
+  printf("6.-Potencia\n");
+  printf("7.-Cerrar calculadora\n");
+  do
+  {
+  printf("Opción a escoger: \n");
+  scanf("%d",&op);
+  }
+	while (op < 1|| op > 7);
+    if (op !=7)
+    {
+        if (op==5)
+        printf("Cual es la cifra para la raiz: ");
+        scanf("%lf",&n1);
+        if (n1<0);
+        {
+            do
+            {
+                printf("Numero no valido, dame otro numero: ");
+                scanf("%lf", &n1);
+            }
+            while(n1 < 0);
+    
+        
+        
