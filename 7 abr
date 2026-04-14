@@ -1,16 +1,24 @@
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
-  float n1,n2,res;
-  int op=0;
+  double n1,n2,res;
+  int op;
+
+ do
+ (
   printf("Bienvenida a mi calculadora\n");
   printf("Escoge una opción\n");
   printf("1.-Suma\n");
   printf("2.-Resta\n");
   printf("3.-Multiplicación\n");
   printf("4.-Division\n");
-  printf("opcion: ");
+  printf("5.-Raiz cuadrada\n");
+  printf("6.-Potencia\n");
+  printf("7.-Cerrar calculadora\n");
+  do
+  (
   scanf("%d",&op);
   printf("Ingresa dos cantidades separadas por espcio \n");
   scanf("%f %f",&n1,&n2);
@@ -20,20 +28,20 @@ int main()
       printf("Opción no valida");
     case 1:
       res=n1+n2;
-      printf("El resultado es %f\n",res);
       break;
     case 2:
       res=n1-n2;
-      printf("El resultado es %f\n",res);
       break;
     case 3:
       res=n1*n2;
-      printf("El resultado es %f\n",res);
       break;    
     case 4:
       res=n1/n2;
-      printf("El resultado es %f\n",res);
       break;
+		case 5:
+      res=sqrt(n1);
+      break;
+
   }
-  return 0;
+  printf("Opcion a escoger: ");
 }
