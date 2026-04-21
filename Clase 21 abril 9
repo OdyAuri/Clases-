@@ -1,8 +1,10 @@
-include stdio.h
+# stdio.h
 int main ()
 {
-  int num = 0;
+  int num = 0 cont=0;
   double sum = 0, med = 0, may = 0, men = 0;
 do 
 {
-  printf("Ingrese 10 numeros entero separados por espacios entre ellos")
+  printf ("Escriba  el valor cont n\"); 
+	scanf(%i ,&num);
+
