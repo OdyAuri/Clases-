@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+#define TAMANO 8
+
+// Función para imprimir el tablero
+void imprimirTablero(char tablero[TAMANO][TAMANO]) {
+    printf("\n   ");
+    for (int j = 0; j < TAMANO; j++) printf("%d ", j);
+    printf("\n");
+
+    for (int i = 0; i < TAMANO; i++) {
+        printf("%d  ", i);
+        for (int j = 0; j < TAMANO; j++) {
+            printf("%c ", tablero[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    char tablero[TAMANO][TAMANO];
+    int fila, col;
+    int barcosColocados = 0;
+    int maxBarcos = 3; // Puedes cambiar cuántos barcos quieres poner
+
+    // Inicializar tablero
+    for (int i = 0; i < TAMANO; i++) {
+        for (int j = 0; j < TAMANO; j++) {
+            tablero[i][j] = 'o';
+        }
+    }
+
+    while (barcosColocados < maxBarcos) {
+        imprimirTablero(tablero);
+        printf("\nColocando barco %d de %d (ocupa 2 espacios horizontales)\n", barcosColocados + 1, maxBarcos);
+        printf("Introduce fila (0-7): ");
+        scanf("%d", &fila);
+        printf("Introduce columna (0-6): "); // Restricción visual
+        scanf("%d", &col);
+
+        // --- VALIDACIONES ---
+        
+        // 1. Validar límites generales
+        if (fila < 0 || fila >= TAMANO || col < 0 || col >= (TAMANO - 1)) {
+            printf("\n¡Error! Coordenada inválida. Recuerda que la columna máxima es %d para que el barco quepa.\n", TAMANO - 2);
+        }
+        // 2. Validar si el espacio ya está ocupado
+        else if (tablero[fila][col] == 'X' || tablero[fila][col + 1] == 'X') {
+            printf("\n¡Error! Espacio ya ocupado por otro barco.\n");
+        } 
+        // 3. Colocación exitosa
+        else {
+            tablero[fila][col] = 'X';     // Parte izquierda
+            tablero[fila][col + 1] = 'X'; // Parte derecha (el "espacio del lado derecho")
+            barcosColocados++;
+            printf("\n¡Barco colocado con éxito!\n");
+        }
+    }
+
+    imprimirTablero(tablero);
+    printf("\nTodos los barcos han sido desplegados.\n");
+
+    return 0;
+}
