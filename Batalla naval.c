@@ -17,16 +17,10 @@ int main() {
     // Imprimimos el tablero con formato
     printf("   Batalla Naval\n\n");
     
-    // Imprimir números de columnas
-    printf("   ");
-    for (j = 0; j < TAMANO; j++) {
-        printf("%d ", j);
-    }
-    printf("\n");
+
 
     // Imprimir filas
     for (i = 0; i < TAMANO; i++) {
-        printf("%d  ", i); // Número de fila
         for (j = 0; j < TAMANO; j++) {
             printf("%c ", tablero[i][j]);
         }
