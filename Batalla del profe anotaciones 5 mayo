@@ -1,0 +1,17 @@
+define lim = 8
+void initialization(char matrix [][lim])
+//no poner dos barcos en el mismo tablero 
+	int flag = 0;
+	if(matrix[x][y] == ´(´)
+
+// for para llenar Barquitos 
+do para darle 
+//Temp es para adelantar la seleccion de las cooordenadas, cuando el usuario de 1,1, se va a poner en el valor de la matriz 0,0
+//Llamar funcion validación y ocupar validadción para ver si hay un barquito 
+*/Se usa while para validar que los datos esten dentro del tablero (el chorizo), avnaza con que una se cumpla, 
+cuando una se cumple cualquiera de ellas no se cumple que este dentro del tablero o signiifca que hay un barco/*
+
+Tarea 
+volver el start del juego función 
+
+  
