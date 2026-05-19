@@ -1,0 +1,17 @@
+#include <stdio.h>
+ void main ()
+{
+int i=0, a=0, b=0;
+	while (b<=1000)
+	{
+		do 
+		{
+			i=i+1;
+			b=i+a;
+			printf("%d ",b);
+		}
+		while (i<=20);
+		
+		a=a+20;
+	}
+}
